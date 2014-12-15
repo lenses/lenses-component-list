@@ -1,0 +1,69 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <th-component-list></th-component-list>
+
+@element th-component-list
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://polymerlabs.github.io/th-component-list
+-->
+<polymer-element name="th-component-list" attributes="componentList">
+
+  <template>
+
+    <link rel="stylesheet" href="th-component-list.css" />
+
+    <template if="{{componentList.length>0}}">
+        <core-menu id="component-list">
+          <template repeat="{{component in componentList}}">
+            <core-item class="{{component.name}}" on-dragStart="{{dragStartList}}"  draggable="true" label="{{component.friendly || component.name}}"></core-item>
+          </template>
+        </core-menu>
+      </template>
+
+  </template>
+
+  <script>
+
+    Polymer({
+      /**
+       * List of components as an array of objects.
+       * @type {Array}
+       */
+      componentList: [
+                        {name:'th-csv', friendly: 'CSV Loader'},
+                        {name: 'th-enigma', friendly: 'Enigma Data Loader'},
+                        {name:'th-table-data', friendly: 'HTML Table Data Loader'},
+
+                        {name:'th-array-function', friendly: 'Map/Reduce/Filter Functions'},
+                        {name:'th-geocoder-firebase', friendly: 'Geocode Data'},
+                        {name:'th-chart-data-filter', friendly: 'Convert Data to Chart Format'},
+
+                        {name:'th-google-map', friendly: 'Google Map'},
+                        {name:'th-n-bar-chart', friendly: 'Bar Chart'},
+
+
+                       ],
+
+        /**
+         * DragStart event handler sets component name in dataTransfer Object
+         * @param  {[type]} e         Event
+         * @param  {[type]} detail    Details
+         * @param  {[type]} selection Selection
+         * @return {[None]}           
+         */
+        dragStartList: function(e, detail, selection) {
+           e.dataTransfer.setData("text/plain",selection.classList[0]);
+
+        },
+
+    });
+
+  </script>
+
+</polymer-element>
