@@ -34,7 +34,7 @@ Element providing solution to no problem in particular.
     <template if="{{_sortedComponentList.length>0}}">
         <core-menu id="component-list">
           <template repeat="{{category in _sortedComponentList}}">
-            <core-submenu icon="menu" label="{{category.name}}">
+            <core-submenu icon="expand-more" label="{{category.name}}">
               <template repeat="{{component in category.components}}">
                 <core-item class="{{component.name}}" on-dragStart="{{dragStartList}}"  draggable="true" label="{{component.friendly || component.name}}"></core-item>
               </template>
