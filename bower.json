@@ -8,9 +8,34 @@
   ],
   "main": "th-component-list.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.5.1"
+    "polymer": "Polymer/polymer#^0.5.1",
+    "core-menu": "Polymer/core-menu",
+    "th-mapbox": "thelmanews/th-mapbox#master",
+    "th-geocoder-firebase": "thelmanews/th-geocoder-firebase#master",
+    "th-csv": "thelmanews/th-csv#master",
+    "th-enigma": "thelmanews/th-enigma#master",
+    "th-google-map": "thelmanews/th-google-map#master",
+    "th-map-us": "thelmanews/th-map-us#master",
+    "th-table-data": "thelmanews/th-table-data#master",
+    "th-array-function": "thelmanews/th-array-function#master",
+    "th-n-bar-chart": "thelmanews/th-n-bar-chart#master",
+    "th-n-bar-chart-horizontal": "thelmanews/th-n-bar-chart-horizontal#master",
+    "th-chart-data-filter": "thelmanews/th-chart-data-filter#master",
+    "th-data-group-by": "thelmanews/th-data-group-by#master",
+    "th-data-split": "thelmanews/th-data-split#master",
+    "th-data-sort": "thelmanews/th-data-sort#master",
+    "th-math-formula": "thelmanews/th-math-formula#master",
+    "th-google-scatter-bubble": "thelmanews/th-google-scatter-bubble#master",
+    "th-google-regions": "thelmanews/th-google-regions#master",
+    "th-google-pie": "thelmanews/th-google-pie#master",
+    "th-google-bar-chart": "thelmanews/th-google-bar-chart#master",
+    "th-google-line": "thelmanews/th-google-line#master"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^2.0.0"
   }
 }
+
+
+
+
