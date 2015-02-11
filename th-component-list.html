@@ -134,6 +134,25 @@ Element providing solution to no problem in particular.
 
         },
         /**
+         * Checks to see if the custom element is already imported. If not imports it.
+         * @param  {DOM}   element  DOM element to check
+         * @param  {Function} callback Callback function to call after done
+         */
+        checkAndImport: function(element, callback) {
+          if (element.constructor == HTMLElement) {
+            var name = element.tagName.toLowerCase();
+            //import on the fly.
+            var elInfo = this._findElementInfoByName(name);
+            var pathPrefix = '../'
+            var path = elInfo.installPath || pathPrefix+name+'/'+name+'.html';
+            Polymer.import([path], callback);
+          }
+          else {
+            callback();
+          }
+
+        },
+        /**
          * Sorts componentList by category
          * @return {[type]} [description]
          */
@@ -160,6 +179,12 @@ Element providing solution to no problem in particular.
 
           }, self._sortedComponentList);
 
+        },
+        _findElementInfoByName: function(name) {
+          var info = this.componentList.filter(function(item) {
+            return item.name===name;
+          })
+          return info.length>0 ? info[0] : null;
         }
 
     });
