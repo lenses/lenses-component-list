@@ -3,12 +3,14 @@
 	}
 
   #component-list {
+    /*
     position: absolute;
     right: 0;
     top: 50px;
+    */
     height: auto;
     width: 200px;
-    border: 3px solid #eee;
+    border: 1px solid #eee;
     box-sizing: border-box;
   }
 
