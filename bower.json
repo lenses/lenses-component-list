@@ -31,9 +31,9 @@
     "lens-viz-scatter-bubble": "lenses/lens-viz-scatter-bubble",
     "lens-viz-g-scatter-bubble": "lenses/lens-viz-g-scatter-bubble",
     "lens-viz-g-regions": "lenses/lens-viz-g-regions",
-    "lens-viz-g-pie": "lenses/lens-viz-g-pie",
+    "lens-viz-g-pie-chart": "lenses/lens-viz-g-pie-chart",
     "lens-viz-g-bar-chart": "lenses/lens-viz-g-bar-chart",
-    "lens-viz-g-line": "lenses/lens-viz-g-line",
+    "lens-viz-g-line": "lenses/lens-viz-g-line"
 
   },
   "devDependencies": {
