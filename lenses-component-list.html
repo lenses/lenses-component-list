@@ -7,31 +7,31 @@
 
 
 <!--
-<link rel="import" href="../th-mapbox/th-mapbox.html">
-<link rel="import" href="../th-geocoder-firebase/th-geocoder-firebase.html">
-<link rel="import" href="../th-csv/th-csv.html">
-<link rel="import" href="../th-enigma/th-enigma.html">
-<link rel="import" href="../th-google-map/th-google-map.html">
-<link rel="import" href="../th-map-us/th-map-us.html">
-<link rel="import" href="../th-table-data/th-table-data.html">
-<link rel="import" href="../th-array-function/th-array-function.html">
-<link rel="import" href="../th-n-bar-chart/th-n-bar-chart.html">
-<link rel="import" href="../th-n-bar-chart-horizontal/th-n-bar-chart-horizontal.html">
-<link rel="import" href="../th-chart-data-filter/th-chart-data-filter.html">
+<link rel="import" href="../lens-data-geocoder-firebase/lens-data-geocoder-firebase.html">
+<link rel="import" href="../lens-input-csv/lens-input-csv.html">
+<link rel="import" href="../lens-input-enigma/lens-input-enigma.html">
+<link rel="import" href="../lens-input-paste/lens-input-paste.html">
+<link rel="import" href="../lens-data-array-func/lens-data-array-func.html">
 
-<link rel="import" href="../th-data-group-by/th-data-group-by.html">
-<link rel="import" href="../th-data-split/th-data-split.html">
-<link rel="import" href="../th-data-sort/th-data-sort.html">
-<link rel="import" href="../th-math-formula/th-math-formula.html">
-<link rel="import" href="../th-data-join/th-data-join.html">
-<link rel="import" href="../th-data-criterion/th-data-criterion.html">
+<link rel="import" href="../lens-data-group-by/lens-data-group-by.html">
+<link rel="import" href="../lens-data-split/lens-data-split.html">
+<link rel="import" href="../lens-data-sort/lens-data-sort.html">
+<link rel="import" href="../lens-data-formula/lens-data-formula.html">
+<link rel="import" href="../lens-data-join/lens-data-join.html">
+<link rel="import" href="../lens-data-filter/lens-data-filter.html">
 
+<link rel="import" href="../lens-viz-g-map/lens-viz-g-map.html">
+<link rel="import" href="../lens-viz-map-us/lens-viz-map-us.html">
+<link rel="import" href="../lens-viz-mapbox/lens-viz-mapbox.html">
 
-<link rel="import" href="../th-google-scatter-bubble/th-google-scatter-bubble.html">
-<link rel="import" href="../th-google-regions/th-google-regions.html">
-<link rel="import" href="../th-google-pie/th-google-pie.html">
-<link rel="import" href="../th-google-bar-chart/th-google-bar-chart.html">
-<link rel="import" href="../th-google-line/th-google-line.html">
+<link rel="import" href="../lens-viz-bar-chart/lens-viz-bar-chart.html">
+<link rel="import" href="../lens-viz-bar-chart-horizontal/lens-viz-bar-chart-horizontal.html">
+
+<link rel="import" href="../lens-viz-g-scatter-bubble/lens-viz-g-scatter-bubble.html">
+<link rel="import" href="../lens-viz-g-regions/lens-viz-g-regions.html">
+<link rel="import" href="../lens-viz-g-pie/lens-viz-g-pie.html">
+<link rel="import" href="../lens-viz-g-bar-chart/lens-viz-g-bar-chart.html">
+<link rel="import" href="../lens-viz-g-line/lens-viz-g-line.html">
 -->
 
 
@@ -41,18 +41,18 @@ Element providing solution to no problem in particular.
 
 ##### Example
 
-    <th-component-list></th-component-list>
+    <lenses-component-list></lenses-component-list>
 
-@element th-component-list
+@element lenses-component-list
 @blurb Element providing solution to no problem in particular.
 @status alpha
-@homepage http://polymerlabs.github.io/th-component-list
+@homepage http://polymerlabs.github.io/lenses-component-list
 -->
-<polymer-element name="th-component-list" attributes="componentList">
+<polymer-element name="lenses-component-list" attributes="componentList">
 
   <template>
 
-    <link rel="stylesheet" href="th-component-list.css" />
+    <link rel="stylesheet" href="lenses-component-list.css" />
 <!--
     <template if="{{componentList.length>0}}">
         <core-menu id="component-list">
@@ -89,43 +89,42 @@ Element providing solution to no problem in particular.
       /**
        * List of components as an array of objects.
        * @type {Array}
-       * @example [{"name":"th-mapbox", "friendly":"Mapbox", "category":"Maps"}]
+       * @example [{"name":"lens-viz-mapbox", "friendly":"Mapbox", "category":"Maps"}]
        */
       componentList: [
-                        {name:'th-csv', friendly: 'CSV Loader', category: 'input'},
-                        {name: 'th-enigma', friendly: 'Enigma Data Loader', category: 'input'},
-                        {name:'th-table-data', friendly: 'HTML Table Data Loader', category: 'input'},
-                        {name:'th-simple-api', friendly: 'Call API by URL', category: 'input'},
+                        {name:'lens-input-csv', friendly: 'CSV Loader', category: 'input'},
+                        {name: 'lens-input-enigma', friendly: 'Enigma Data Loader', category: 'input'},
+                        {name:'lens-input-paste', friendly: 'HTML Table Data Loader', category: 'input'},
+                        {name:'lens-simple-api', friendly: 'Call API by URL', category: 'input'},
 
-                        {name:'th-array-function', friendly: 'Map/Reduce/Filter Functions', category: 'transform'},
-                        {name:'th-geocoder-firebase', friendly: 'Geocode Data', category: 'transform'},
-                        {name:'th-chart-data-filter', friendly: 'Convert Data to Chart Format', category: 'transform'},
-                        {name:'th-data-group-by', friendly: 'Group rows', category: 'transform'},
-                        {name:'th-data-split', friendly: 'Split columns', category: 'transform'},
-                        {name:'th-data-sort', friendly: 'Sort rows', category: 'transform'},
-                        {name:'th-math-formula', friendly: 'Math Formula', category: 'transform'},
-                        {name:'th-data-join', friendly: 'Join Two Columns', category: 'transform'},
-                        {name:'th-data-criterion', friendly: 'Filter data by criterion', category: 'transform'},
-                        {name:'th-data-crossfilter', friendly: 'Crossfilter data', category: 'transform'},
-                        {name:'th-data-zip', friendly: 'Zip two datasets', category: 'transform'},
+                        {name:'lens-data-array-func', friendly: 'Map/Reduce/Filter Functions', category: 'transform'},
+                        {name:'lens-data-geocoder-firebase', friendly: 'Geocode Data', category: 'transform'},
+                        {name:'lens-data-group-by', friendly: 'Group rows', category: 'transform'},
+                        {name:'lens-data-split', friendly: 'Split columns', category: 'transform'},
+                        {name:'lens-data-sort', friendly: 'Sort rows', category: 'transform'},
+                        {name:'lens-data-formula', friendly: 'Math Formula', category: 'transform'},
+                        {name:'lens-data-join', friendly: 'Join Two Columns', category: 'transform'},
+                        {name:'lens-data-filter', friendly: 'Filter data by criterion', category: 'transform'},
+                        {name:'lens-data-crossfilter', friendly: 'Crossfilter data', category: 'transform'},
+                        {name:'lens-data-zip', friendly: 'Zip two datasets', category: 'transform'},
 
-                        {name:'th-map-us', friendly: 'US Map', category: 'visualize'},
-                        {name:'th-n-bar-chart', friendly: 'Bar Chart', category: 'visualize'},
-                        {name:'th-n-bar-chart-horizontal', friendly: 'Horizontal Bar Chart', category: 'visualize'},
-                        {name:'th-google-map', friendly: 'Google Map', category: 'visualize'},
-                        {name:'th-google-scatter-bubble', friendly: 'Bubble Chart', category: 'visualize'},
-                        {name:'th-google-pie', friendly: 'Pie Chart', category: 'visualize'},
-                        {name:'th-google-regions', friendly: 'Regions Chart', category: 'visualize'},
-                        {name:'th-google-bar-chart', friendly: 'G Bar Chart', category: 'visualize'},
-                        {name:'th-google-line', friendly: 'G Line Chart', category: 'visualize'},
-                        {name:'th-mapbox', friendly:'Mapbox', category:'visualize'}
+                        {name:'lens-viz-map-us', friendly: 'US Map', category: 'visualize'},
+                        {name:'lens-viz-bar-chart', friendly: 'Bar Chart', category: 'visualize'},
+                        {name:'lens-viz-bar-chart-horizontal', friendly: 'Horizontal Bar Chart', category: 'visualize'},
+                        {name:'lens-viz-g-map', friendly: 'Google Map', category: 'visualize'},
+                        {name:'lens-viz-g-scatter-bubble', friendly: 'Bubble Chart', category: 'visualize'},
+                        {name:'lens-viz-g-pie', friendly: 'Pie Chart', category: 'visualize'},
+                        {name:'lens-viz-g-regions', friendly: 'Regions Chart', category: 'visualize'},
+                        {name:'lens-viz-g-bar-chart', friendly: 'G Bar Chart', category: 'visualize'},
+                        {name:'lens-viz-g-line', friendly: 'G Line Chart', category: 'visualize'},
+                        {name:'lens-viz-mapbox', friendly:'Mapbox', category:'visualize'}
 
 
                        ],
         /**
          * Component list orderes by category
          * @type {Array}
-         * @example [{name: 'input', components [{name:'th-csv', friendly: 'CSV Loader', category: 'input'}, ...]}, ...]
+         * @example [{name: 'input', components [{name:'lens-input-csv', friendly: 'CSV Loader', category: 'input'}, ...]}, ...]
          */
         _sortedComponentList: [],
         ready: function() {
