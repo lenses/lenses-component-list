@@ -16,7 +16,7 @@
     "lens-input-simple-api": "lenses/lens-input-simple-api",
     "lens-data-geocoder-firebase": "lenses/lens-data-geocoder-firebase",
     "lens-data-array-func": "lenses/lens-data-array-func",
-    "lens-data-group-by": "lenses/lens-data-group-by",
+    "lens-data-groupby": "lenses/lens-data-groupby",
     "lens-data-split": "lenses/lens-data-split",
     "lens-data-sort": "lenses/lens-data-sort",
     "lens-data-formula": "lenses/lens-data-formula",
