@@ -8,7 +8,7 @@
   ],
   "main": "lenses-component-list.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.5.1",
+    "polymer": "Polymer/polymer#~0.5.1",
     "core-menu": "Polymer/core-menu",
     "lens-input-csv": "lenses/lens-input-csv",
     "lens-input-enigma": "lenses/lens-input-enigma",
