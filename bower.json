@@ -13,6 +13,7 @@
     "lens-input-csv": "lenses/lens-input-csv",
     "lens-input-enigma": "lenses/lens-input-enigma",
     "lens-input-paste": "lenses/lens-input-paste",
+    "lens-input-simple-api": "lenses/lens-input-simple-api",
     "lens-data-geocoder-firebase": "lenses/lens-data-geocoder-firebase",
     "lens-data-array-func": "lenses/lens-data-array-func",
     "lens-data-group-by": "lenses/lens-data-group-by",
