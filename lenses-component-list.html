@@ -153,7 +153,7 @@ Element providing solution to no problem in particular.
             var elInfo = this._findElementInfoByName(name);
 	    
 	   //assuming lenses-component-list and the lenses are installed in the same directory by bower (which is the defualt)
-	   var pathPrefix = this.resolvePath('lenses-component-list/lenses-component-list.html').replace('lenses-component-list.html','');
+	   var pathPrefix = this.resolvePath('lenses-component-list.html').replace('lenses-component-list/lenses-component-list.html','');
 
 	    var path = elInfo.installPath || pathPrefix+name+'/'+name+'.html';
             Polymer.import([path], callback);
