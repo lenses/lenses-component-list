@@ -72,11 +72,11 @@ Element providing solution to no problem in particular.
     
     
               <template is="dom-repeat" items="{{category.components}}" as="component">
-                <iron-item class="{{component.name}}" on-dragStart="{{dragStartList}}"  draggable="true" >
+                <paper-item class="{{component.name}}" on-dragStart="dragStartList"  draggable="true" >
 
                   <span class="abrv">{{component.abrv}}</span><span class="desc">{{component.friendly || component.name}}</span>
                
-                </iron-item>
+                </paper-item>
               
               </template>
     
@@ -153,8 +153,8 @@ Element providing solution to no problem in particular.
          * @param  {[type]} selection Selection
          * @return {[None]}           
          */
-        dragStartList: function(e, detail, selection) {
-           e.dataTransfer.setData("text/plain",selection.classList[0]);
+        dragStartList: function(e) {
+           e.dataTransfer.setData("text/plain",e.srcElement.classList[0]);
 
         },
         /**

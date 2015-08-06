@@ -14,13 +14,13 @@
     box-sizing: border-box;
   }
 
-  #component-list core-item {
+  #component-list paper-item {
     font-size: 12px;
     /*padding: 0px 10px;*/
     cursor: pointer;
   }
 
-  #component-list core-item:hover {
+  #component-list paper-item:hover {
     background-color: #eee;
   }
 
