@@ -1,9 +1,8 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../core-menu/core-menu.html">
-<link rel="import" href="../core-menu/core-submenu.html">
-<link rel="import" href="../core-icon-button/core-icon-button.html">
-<link rel="import" href="../core-icons/core-icons.html">
-<link rel="import" href="../core-icons/image-icons.html">
+<link rel="import" href="../iron-menu-behavior/iron-menu-behavior.html">
+<link rel="import" href="../iron-icon-button/iron-icon-button.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../iron-icons/image-icons.html">
 
 
 <!--
@@ -48,33 +47,33 @@ Element providing solution to no problem in particular.
 @status alpha
 @homepage http://polymerlabs.github.io/lenses-component-list
 -->
-<polymer-element name="lenses-component-list" attributes="componentList">
+<dom-module id="lenses-component-list" attributes="componentList">
 
   <template>
 
     <link rel="stylesheet" href="lenses-component-list.css" />
 <!--
     <template if="{{componentList.length>0}}">
-        <core-menu id="component-list">
+        <iron-menu-behavior id="component-list">
           <template repeat="{{component in componentList}}">
-            <core-item class="{{component.name}}" on-dragStart="{{dragStartList}}"  draggable="true" label="{{component.friendly || component.name}}"></core-item>
+            <iron-item class="{{component.name}}" on-dragStart="{{dragStartList}}"  draggable="true" label="{{component.friendly || component.name}}"></iron-item>
           </template>
-        </core-menu>
+        </iron-menu-behavior>
       </template>
   -->
 
     <template if="{{_sortedComponentList.length>0}}">
-        <core-menu id="component-list">
+        <iron-menu-behavior id="component-list">
           <template repeat="{{category in _sortedComponentList}}">
-            <core-submenu icon="expand-more" label="{{category.name}}">
+            <iron-menu-behavior icon="expand-more" label="{{category.name}}">
               <template repeat="{{component in category.components}}">
-                <core-item class="{{component.name}}" on-dragStart="{{dragStartList}}"  draggable="true" >
+                <iron-item class="{{component.name}}" on-dragStart="{{dragStartList}}"  draggable="true" >
                   <span class="abrv">{{component.abrv}}</span><span class="desc">{{component.friendly || component.name}}</span>
-                </core-item>
+                </iron-item>
               </template>
-            </core-submenu>
+            </iron-menu-behavior>
           </template>
-        </core-menu>
+        </iron-menu-behavior>
       </template>
 
 
@@ -214,4 +213,4 @@ Element providing solution to no problem in particular.
 
   </script>
 
-</polymer-element>
+</dom-module>
