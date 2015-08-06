@@ -9,7 +9,7 @@
   "main": "lenses-component-list.html",
   "dependencies": {
     "polymer": "Polymer/polymer#~0.5.1",
-    "core-menu": "Polymer/core-menu",
+    "iron-menu-behavior": "PolymerElements/iron-menu-behavior",
     "lens-input-csv": "lenses/lens-input-csv",
     "lens-input-enigma": "lenses/lens-input-enigma",
     "lens-input-paste": "lenses/lens-input-paste",
