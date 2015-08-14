@@ -14,17 +14,17 @@
     box-sizing: border-box;
   }
 
-  #component-list paper-item {
-    font-size: 12px;
-    /*padding: 0px 10px;*/
+  paper-item {
+    display: block; 
     cursor: pointer;
   }
 
-  #component-list paper-item:hover {
-    background-color: #eee;
+  paper-item:hover {
   }
-
-  #component-list .abrv {
+  .component {
+    margin-left: 30px;
+  }
+  .component .abrv {
     font-weight: bold;
     text-transform: uppercase;
     margin-right: 5px;
@@ -35,4 +35,17 @@
     text-align: center;
     line-height: 30px;
     color: #444;
+   }
+   .category {
+    font-size: 18px;
+   }
+   .category::before {
+    content: '\02C3';
+    margin-right: 5px;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 10px;
+    padding: 0 7px;
+    height: 15px;
    }
