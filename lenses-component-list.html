@@ -80,7 +80,7 @@ Element providing solution to no problem in particular.
                 <template is="dom-repeat" items="{{category.components}}" as="component">
                   <paper-item component-name$="{{component.name}}" class="component-item" on-dragStart="dragStartList"  draggable="true" >
 
-                    <span class="abrv">{{component.abrv}}</span><span class="desc">{{component.friendly || component.name}}</span>
+                  <span class="abrv">{{component.abrv}}</span><span class="desc">{{ getFriendlyName(component)}}</span>
                  
                   </paper-item>
                 
@@ -203,6 +203,9 @@ Element providing solution to no problem in particular.
          */
         getComponentInfo: function(tagName) {
           return this._findElementInfoByName(tagName);
+        },
+        getFriendlyName: function(component) {
+          return component.friendly || component.name;
         },
         /**
          * Sorts componentList by category
