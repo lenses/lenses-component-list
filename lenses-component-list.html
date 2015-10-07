@@ -4,6 +4,7 @@
 <link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-icons/image-icons.html">
 
+<link rel="import" href="../lens-data-sort/lens-data-sort.html">
 
 <!--
 <link rel="import" href="../lens-data-geocoder-firebase/lens-data-geocoder-firebase.html">
@@ -77,7 +78,7 @@ Element providing solution to no problem in particular.
       
       
                 <template is="dom-repeat" items="{{category.components}}" as="component">
-                  <paper-item class$="{{component.name}}" on-dragStart="dragStartList"  draggable="true" >
+                  <paper-item component-name$="{{component.name}}" class="component-item" on-dragStart="dragStartList"  draggable="true" >
 
                     <span class="abrv">{{component.abrv}}</span><span class="desc">{{component.friendly || component.name}}</span>
                  
@@ -160,17 +161,15 @@ Element providing solution to no problem in particular.
          * @return {[None]}           
          */
         dragStartList: function(e) {
-           e.dataTransfer.setData("text/plain",e.srcElement.classList[0]);
+           e.dataTransfer.setData("text/plain", e.srcElement.getAttribute('component-name')); // e.srcElement.classList[0]);
 
         },
         toggleCategory: function(e) {
-          console.log(e, e.srcElement, e.srcElement.__data);
           var id = e.srcElement.__data;
           //todo cache
           var collapse = Polymer.dom(this.root).querySelector('#'+id);
           collapse.toggle();
           if(this.openCollapse && this.openCollapse.opened) {
-            console.log('hide', this.openCollapse);
             this.openCollapse.toggle();
             this.openCollapse = null;
           }

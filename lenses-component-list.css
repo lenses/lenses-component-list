@@ -21,10 +21,10 @@
 
   paper-item:hover {
   }
-  .component {
+  .component-item {
     margin-left: 30px;
   }
-  .component .abrv {
+  .component-item .abrv {
     font-weight: bold;
     text-transform: uppercase;
     margin-right: 5px;
