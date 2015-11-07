@@ -162,11 +162,11 @@ Element providing solution to no problem in particular.
          * @return {[None]}           
          */
         dragStartList: function(e) {
-           e.dataTransfer.setData("text/plain", e.srcElement.getAttribute('component-name')); // e.srcElement.classList[0]);
+           e.dataTransfer.setData("text/plain", e.target.getAttribute('component-name')); // e.srcElement.classList[0]);
 
         },
         toggleCategory: function(e) {
-          var id = e.srcElement.__data;
+          var id = e.target.__data;
           //todo cache
           var collapse = Polymer.dom(this.root).querySelector('#'+id);
           collapse.toggle();
