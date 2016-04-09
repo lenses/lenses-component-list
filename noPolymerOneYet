@@ -1,0 +1,18 @@
+    "lens-input-simple-api": "lenses/lens-input-simple-api#polymerOne",
+    "lens-viz-g-line-chart": "lenses/lens-viz-g-line-chart#polymerOne"
+    "lens-viz-g-pie-chart": "lenses/lens-viz-g-pie-chart#polymerOne",
+    "lens-data-join": "lenses/lens-data-join#polymerOne",
+    "lens-viz-map-us": "lenses/lens-viz-map-us#polymerOne",
+    "lens-data-filter": "lenses/lens-data-filter#polymerOne",
+    "lens-viz-g-map": "lenses/lens-viz-g-map#polymerOne",
+    "lens-viz-bar-chart-horizontal": "lenses/lens-viz-bar-chart-horizontal#polymerOne",
+    "lens-viz-line-chart": "lenses/lens-viz-line-chart#polymerOne",
+    "lens-viz-bar-chart": "lenses/lens-viz-bar-chart#polymerOne",
+    "lens-viz-stacked-chart": "lenses/lens-viz-stacked-chart#polymerOne",
+    "lens-viz-g-regions": "lenses/lens-viz-g-regions#polymerOne",
+    "lens-viz-g-scatter-bubble": "lenses/lens-viz-g-scatter-bubble#polymerOne",
+    "lens-data-array-func": "lenses/lens-data-array-func#polymerOne",
+
+
+// bad bower.json
+    "lens-data-sort": "lenses/lens-data-sort#polymerOne",
